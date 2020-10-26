@@ -26,6 +26,7 @@ resource "aws_instance" "ec2" {
     delete_on_termination = var.ebs_para.delete_on_termination
   }
   tags = {
-    Name = "${var.ec2_para.NameTag}-instance${count.index}"
+    Name      = "${var.ec2_para.NameTag}-instance${count.index}"
+    AWSBackup = "EC2"
   }
 }

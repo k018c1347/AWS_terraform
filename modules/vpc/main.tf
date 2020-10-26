@@ -83,7 +83,7 @@ resource "aws_route" "public" {
 resource "aws_route" "private" {
   count                  = var.vpc_para.subnet_count
   route_table_id         = aws_route_table.private[count.index].id
-  gateway_id             = aws_nat_gateway.nat_gateway[count.index].id
+  nat_gateway_id         = aws_nat_gateway.nat_gateway[count.index].id
   destination_cidr_block = "0.0.0.0/0"
 }
 
@@ -94,12 +94,18 @@ resource "aws_nat_gateway" "nat_gateway" {
   allocation_id = aws_eip.nat_gateway[count.index].id
   subnet_id     = aws_subnet.private[count.index].id
   depends_on    = [aws_internet_gateway.igw]
+  tags = {
+    Name = "${var.vpc_para.NameTag}-NAT"
+  }
 }
 
 resource "aws_eip" "nat_gateway" {
   count      = var.vpc_para.subnet_count
   vpc        = true
   depends_on = [aws_internet_gateway.igw]
+  tags = {
+    Name = "${var.vpc_para.NameTag}-EIP"
+  }
 }
 
 /*

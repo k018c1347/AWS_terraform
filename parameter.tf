@@ -15,7 +15,6 @@ module vpc {
 
 }
 
-
 module ec2_sg {
   source = "./modules/security_group"
 
@@ -27,7 +26,6 @@ module ec2_sg {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
 
 module ec2 {
   source = "./modules/ec2"
@@ -48,7 +46,6 @@ module ec2 {
   }
 }
 
-
 module alb_sg {
   source = "./modules/security_group"
 
@@ -60,7 +57,6 @@ module alb_sg {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
 
 
 locals {
