@@ -38,7 +38,7 @@ module ec2 {
     sg_id            = module.ec2_sg.sg_id
     NameTag          = "Terraform"
     instance_type    = "t2.micro"
-    instance_count   = 3
+    instance_count   = 2
     key_name         = "cf-minami"
   }
   ebs_para = {
@@ -47,6 +47,7 @@ module ec2 {
     delete_on_termination = false
   }
 }
+
 
 module alb_sg {
   source = "./modules/security_group"
@@ -60,26 +61,16 @@ module alb_sg {
   }
 }
 
-module alb {
-  source = "./modules/alb"
 
-  alb_base_config = {
-    public_subnet_id           = module.vpc.public_subnet_id
-    sg_id                      = module.alb_sg.sg_id
-    NameTag                    = "Terraform"
-    enable_deletion_protection = false
-  }
 
-  alb_target_config = {
-    port        = 80
-    protocol    = "HTTP"
-    vpc_id      = module.vpc.vpc_id
-    path        = "/"
-    instance_id = module.ec2.instance_id
-  }
+locals {
+  NameTag                    = "Terraform"
+  enable_deletion_protection = false
+  port                       = 80
+  protocol                   = "HTTP"
+  path                       = "/"
+
 }
 
-output "instance_ip" {
-  value = module.ec2.instance_ip
-}
+
 
