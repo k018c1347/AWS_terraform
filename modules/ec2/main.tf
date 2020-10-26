@@ -7,7 +7,15 @@ resource "aws_instance" "ec2" {
   count         = var.ec2_para.instance_count
   ami           = data.aws_ssm_parameter.amzn2_ami.value
   instance_type = var.ec2_para.instance_type
-  key_name      = var.ec2_para.key_name
+  user_data     = <<EOF
+    #!/bin/bash
+    yum install -y httpd
+    echo 'terraform' > /var/www/html/index.html
+    systemctl start httpd.service
+  EOF
+
+
+  key_name = var.ec2_para.key_name
   vpc_security_group_ids = [
     var.ec2_para.sg_id
   ]

@@ -12,6 +12,7 @@ module vpc {
     enable_dns_hostnames = true
     subnet_count         = 2
   }
+
 }
 
 
@@ -47,6 +48,38 @@ module ec2 {
   }
 }
 
+module alb_sg {
+  source = "./modules/security_group"
+
+  sg_para = {
+    name        = "alb_sg"
+    vpc_id      = module.vpc.vpc_id
+    protocol    = "tcp"
+    port        = [80, 443]
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+}
+
+module alb {
+  source = "./modules/alb"
+
+  alb_base_config = {
+    public_subnet_id           = module.vpc.public_subnet_id
+    sg_id                      = module.alb_sg.sg_id
+    NameTag                    = "Terraform"
+    enable_deletion_protection = false
+  }
+
+  alb_target_config = {
+    port        = 80
+    protocol    = "HTTP"
+    vpc_id      = module.vpc.vpc_id
+    path        = "/"
+    instance_id = module.ec2.instance_id
+  }
+}
+
 output "instance_ip" {
   value = module.ec2.instance_ip
 }
+

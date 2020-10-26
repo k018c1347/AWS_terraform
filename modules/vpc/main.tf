@@ -76,3 +76,72 @@ resource "aws_route_table_association" "private" {
   subnet_id      = aws_subnet.private[count.index].id
   route_table_id = aws_route_table.private.id
 }
+
+
+# NAT
+/*
+resource "aws_nat_gateway" "nat_gateway" {
+  allocation_id = aws_eip.nat_gateway.id
+  subnet_id     = aws_subnet.private[0].id
+  depends_on    = [aws_internet_gateway.igw]
+}
+
+resource "aws_eip" "nat_gateway" {
+  vpc        = true
+  depends_on = [aws_internet_gateway.igw]
+}
+*/
+/*
+# Cretae Subnets
+resource "aws_subnet" "public" {
+  for_each                = var.subnets
+  vpc_id                  = aws_vpc.minami_vpc.id
+  cidr_block              = cidrsubnet(aws_vpc.minami_vpc.cidr_block, 8, each.value)
+  availability_zone       = each.key
+  map_public_ip_on_launch = true
+  tags = {
+    Name = "${each.key}-PublicSubnet"
+  }
+}
+
+resource "aws_subnet" "private" {
+  for_each = var.subnets
+  vpc_id   = aws_vpc.minami_vpc.id
+  //Cidr_blackで改善の余地あり
+  cidr_block              = cidrsubnet(aws_vpc.minami_vpc.cidr_block, 8, each.value + 3)
+  availability_zone       = each.key
+  map_public_ip_on_launch = false
+
+  tags = {
+    Name = "${each.key}-PrivateSubnet"
+  }
+
+}
+*/
+
+/*　汎用的な　for_each　利用
+variable "subnets" {
+  default = {
+    "test-subnet-1a" = {
+      cidr = "10.0.1.0/24"
+      az   = "ap-northeast-1a"
+    }
+    "test-subnet-1c" = {
+      cidr = "10.0.2.0/24"
+      az   = "ap-northeast-1c"
+    }
+  }
+}
+
+resource "aws_subnet" "public" {
+  for_each                = var.subnets
+  vpc_id                  = aws_vpc.minami_vpc.id
+  cidr_block              = each.value.cidr
+  map_public_ip_on_launch = true
+  availability_zone       = each.value.az
+  tags = {
+    Name = "${var.subnets.key}-PublicSubnet$"
+  }
+}
+
+*/
