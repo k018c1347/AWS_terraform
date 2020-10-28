@@ -51,18 +51,14 @@ resource "aws_route_table" "public" {
   }
 }
 resource "aws_route_table" "private" {
+  count  = var.vpc_para.subnet_count
   vpc_id = aws_vpc.minami_vpc.id
   tags = {
     Name = "${var.vpc_para.NameTag}-PrivateRT"
   }
 }
 
-# Cretae Route
-resource "aws_route" "public" {
-  route_table_id         = aws_route_table.public.id
-  gateway_id             = aws_internet_gateway.igw.id
-  destination_cidr_block = "0.0.0.0/0"
-}
+
 
 # Association RouteTables
 resource "aws_route_table_association" "public" {
@@ -74,23 +70,44 @@ resource "aws_route_table_association" "public" {
 resource "aws_route_table_association" "private" {
   count          = var.vpc_para.subnet_count
   subnet_id      = aws_subnet.private[count.index].id
-  route_table_id = aws_route_table.private.id
+  route_table_id = aws_route_table.private[count.index].id
 }
 
+# Cretae Route
+resource "aws_route" "public" {
+  route_table_id         = aws_route_table.public.id
+  gateway_id             = aws_internet_gateway.igw.id
+  destination_cidr_block = "0.0.0.0/0"
+}
+
+resource "aws_route" "private" {
+  count                  = var.vpc_para.subnet_count
+  route_table_id         = aws_route_table.private[count.index].id
+  nat_gateway_id         = aws_nat_gateway.nat_gateway[count.index].id
+  destination_cidr_block = "0.0.0.0/0"
+}
 
 # NAT
-/*
+
 resource "aws_nat_gateway" "nat_gateway" {
-  allocation_id = aws_eip.nat_gateway.id
-  subnet_id     = aws_subnet.private[0].id
+  count         = var.vpc_para.subnet_count
+  allocation_id = aws_eip.nat_gateway[count.index].id
+  subnet_id     = aws_subnet.private[count.index].id
   depends_on    = [aws_internet_gateway.igw]
+  tags = {
+    Name = "${var.vpc_para.NameTag}-NAT"
+  }
 }
 
 resource "aws_eip" "nat_gateway" {
+  count      = var.vpc_para.subnet_count
   vpc        = true
   depends_on = [aws_internet_gateway.igw]
+  tags = {
+    Name = "${var.vpc_para.NameTag}-EIP"
+  }
 }
-*/
+
 /*
 # Cretae Subnets
 resource "aws_subnet" "public" {

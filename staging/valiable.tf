@@ -1,9 +1,7 @@
-provider "aws" {
-  region = "ap-southeast-1"
-}
+
 
 module vpc {
-  source = "./modules/vpc"
+  source = "../modules/vpc"
 
   vpc_para = {
     NameTag              = "Terraform-minami"
@@ -15,9 +13,8 @@ module vpc {
 
 }
 
-
 module ec2_sg {
-  source = "./modules/security_group"
+  source = "../modules/security_group"
 
   sg_para = {
     name        = "sg"
@@ -28,9 +25,8 @@ module ec2_sg {
   }
 }
 
-
 module ec2 {
-  source = "./modules/ec2"
+  source = "../modules/ec2"
 
   ec2_para = {
     vpc_id           = module.vpc.vpc_id
@@ -38,7 +34,7 @@ module ec2 {
     sg_id            = module.ec2_sg.sg_id
     NameTag          = "Terraform"
     instance_type    = "t2.micro"
-    instance_count   = 3
+    instance_count   = ["EC2-1a", "EC2-1c"]
     key_name         = "cf-minami"
   }
   ebs_para = {
@@ -48,8 +44,8 @@ module ec2 {
   }
 }
 
-module alb_sg {
-  source = "./modules/security_group"
+module lb_sg {
+  source = "../modules/security_group"
 
   sg_para = {
     name        = "alb_sg"
@@ -60,17 +56,17 @@ module alb_sg {
   }
 }
 
-module alb {
-  source = "./modules/alb"
 
-  alb_base_config = {
+module lb {
+  source = "../modules/alb"
+
+  lb_base_config = {
     public_subnet_id           = module.vpc.public_subnet_id
-    sg_id                      = module.alb_sg.sg_id
+    sg_id                      = module.lb_sg.sg_id
     NameTag                    = "Terraform"
     enable_deletion_protection = false
   }
-
-  alb_target_config = {
+  lb_target_config = {
     port        = 80
     protocol    = "HTTP"
     vpc_id      = module.vpc.vpc_id
@@ -79,7 +75,14 @@ module alb {
   }
 }
 
-output "instance_ip" {
-  value = module.ec2.instance_ip
+module backup {
+  source = "../modules/aws_backup"
+  backup_para = {
+    plan_name  = "TerraformBackup"
+    vault_name = "TerraformBackup"
+    schedule   = "cron(0 18 * * ? *)"
+
+    lifecycle = 3
+  }
 }
 
