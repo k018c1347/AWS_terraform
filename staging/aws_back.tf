@@ -1,6 +1,6 @@
 
 //モジュール化予定
-
+/*
 data "aws_iam_role" "role" {
   name = "AWSBackupDefaultServiceRole"
 }
@@ -37,4 +37,4 @@ resource "aws_backup_selection" "EC2" {
   }
 }
 
-
+*/
