@@ -1,3 +1,6 @@
+provider "aws" {
+  region = "ap-southeast-1"
+}
 
 
 module vpc {
@@ -79,7 +82,7 @@ module backup {
   source = "../modules/aws_backup"
   backup_para = {
     plan_name  = "TerraformBackup"
-    vault_name = "TerraformBackup"
+    vault_name = "TerraformBackup1"
     schedule   = "cron(0 18 * * ? *)"
 
     lifecycle = 3
