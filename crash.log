@@ -1,0 +1,2141 @@
+2020/10/28 22:00:36 [INFO] Terraform version: 0.12.6  
+2020/10/28 22:00:36 [INFO] Go runtime version: go1.12.4
+2020/10/28 22:00:36 [INFO] CLI args: []string{"/usr/local/Cellar/tfenv/2.0.0/versions/0.12.6/terraform", "plan"}
+2020/10/28 22:00:36 [DEBUG] Attempting to open CLI config file: /Users/mkoki0822/.terraformrc
+2020/10/28 22:00:36 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2020/10/28 22:00:36 [INFO] CLI command args: []string{"plan"}
+2020/10/28 22:00:36 [TRACE] Meta.Backend: no config given or present on disk, so returning nil config
+2020/10/28 22:00:36 [TRACE] Meta.Backend: backend has not previously been initialized in this working directory
+2020/10/28 22:00:36 [DEBUG] New state was assigned lineage "28f67417-a1e3-e780-4416-5bf158713ff6"
+2020/10/28 22:00:36 [TRACE] Meta.Backend: using default local state only (no backend configuration, and no existing initialized backend)
+2020/10/28 22:00:36 [TRACE] Meta.Backend: instantiated backend of type <nil>
+2020/10/28 22:00:36 [DEBUG] checking for provider in "."
+2020/10/28 22:00:36 [DEBUG] checking for provider in "/usr/local/Cellar/tfenv/2.0.0/versions/0.12.6"
+2020/10/28 22:00:36 [DEBUG] checking for provider in ".terraform/plugins/darwin_amd64"
+2020/10/28 22:00:36 [DEBUG] found provider "terraform-provider-aws_v3.12.0_x5"
+2020/10/28 22:00:36 [DEBUG] found valid plugin: "aws", "3.12.0", "/Users/mkoki0822/terraform/.terraform/plugins/darwin_amd64/terraform-provider-aws_v3.12.0_x5"
+2020/10/28 22:00:36 [DEBUG] checking for provisioner in "."
+2020/10/28 22:00:36 [DEBUG] checking for provisioner in "/usr/local/Cellar/tfenv/2.0.0/versions/0.12.6"
+2020/10/28 22:00:36 [DEBUG] checking for provisioner in ".terraform/plugins/darwin_amd64"
+2020/10/28 22:00:36 [TRACE] Meta.Backend: backend <nil> does not support operations, so wrapping it in a local backend
+2020/10/28 22:00:36 [INFO] backend/local: starting Plan operation
+2020/10/28 22:00:36 [TRACE] backend/local: requesting state manager for workspace "default"
+2020/10/28 22:00:36 [TRACE] backend/local: state manager for workspace "default" will:
+ - read initial snapshot from terraform.tfstate
+ - write new snapshots to terraform.tfstate
+ - create any backup at terraform.tfstate.backup
+2020/10/28 22:00:36 [TRACE] backend/local: requesting state lock for workspace "default"
+2020/10/28 22:00:36 [TRACE] statemgr.Filesystem: preparing to manage state snapshots at terraform.tfstate
+2020/10/28 22:00:36 [TRACE] statemgr.Filesystem: no previously-stored snapshot exists
+2020/10/28 22:00:36 [TRACE] statemgr.Filesystem: locking terraform.tfstate using fcntl flock
+2020/10/28 22:00:36 [TRACE] statemgr.Filesystem: writing lock metadata to .terraform.tfstate.lock.info
+2020/10/28 22:00:36 [TRACE] backend/local: reading remote state for workspace "default"
+2020/10/28 22:00:36 [TRACE] statemgr.Filesystem: reading latest snapshot from terraform.tfstate
+2020/10/28 22:00:36 [TRACE] statemgr.Filesystem: snapshot file has nil snapshot, but that's okay
+2020/10/28 22:00:36 [TRACE] statemgr.Filesystem: read nil snapshot
+2020/10/28 22:00:36 [TRACE] backend/local: retrieving local state snapshot for workspace "default"
+2020/10/28 22:00:36 [TRACE] backend/local: building context for current working directory
+2020/10/28 22:00:36 [TRACE] terraform.NewContext: starting
+2020/10/28 22:00:36 [TRACE] terraform.NewContext: resolving provider version selections
+2020/10/28 22:00:37 [TRACE] terraform.NewContext: loading provider schemas
+2020/10/28 22:00:37 [TRACE] LoadSchemas: retrieving schema for provider type "aws"
+2020-10-28T22:00:37.436+0900 [INFO]  plugin: configuring client automatic mTLS
+2020-10-28T22:00:37.463+0900 [DEBUG] plugin: starting plugin: path=/Users/mkoki0822/terraform/.terraform/plugins/darwin_amd64/terraform-provider-aws_v3.12.0_x5 args=[/Users/mkoki0822/terraform/.terraform/plugins/darwin_amd64/terraform-provider-aws_v3.12.0_x5]
+2020-10-28T22:00:37.466+0900 [DEBUG] plugin: plugin started: path=/Users/mkoki0822/terraform/.terraform/plugins/darwin_amd64/terraform-provider-aws_v3.12.0_x5 pid=69692
+2020-10-28T22:00:37.466+0900 [DEBUG] plugin: waiting for RPC address: path=/Users/mkoki0822/terraform/.terraform/plugins/darwin_amd64/terraform-provider-aws_v3.12.0_x5
+2020-10-28T22:00:37.523+0900 [INFO]  plugin.terraform-provider-aws_v3.12.0_x5: configuring server automatic mTLS: timestamp=2020-10-28T22:00:37.522+0900
+2020-10-28T22:00:37.564+0900 [DEBUG] plugin: using plugin: version=5
+2020-10-28T22:00:37.564+0900 [DEBUG] plugin.terraform-provider-aws_v3.12.0_x5: plugin address: address=/var/folders/6p/xmqwxhnx7xq3pvy18dyy_zmh0000gn/T/plugin888457235 network=unix timestamp=2020-10-28T22:00:37.563+0900
+2020/10/28 22:00:37 [TRACE] GRPCProvider: GetSchema
+2020/10/28 22:00:37 [TRACE] GRPCProvider: Close
+2020-10-28T22:00:37.802+0900 [DEBUG] plugin: plugin process exited: path=/Users/mkoki0822/terraform/.terraform/plugins/darwin_amd64/terraform-provider-aws_v3.12.0_x5 pid=69692
+2020-10-28T22:00:37.803+0900 [DEBUG] plugin: plugin exited
+2020/10/28 22:00:37 [TRACE] terraform.NewContext: complete
+2020/10/28 22:00:37 [TRACE] backend/local: finished building terraform.Context
+2020/10/28 22:00:37 [TRACE] backend/local: requesting interactive input, if necessary
+2020/10/28 22:00:37 [TRACE] Context.Input: Prompting for variables
+2020/10/28 22:00:37 [TRACE] Context.Input: Prompting for provider arguments
+2020/10/28 22:00:37 [TRACE] Context.Input: Provider provider.aws declared at parameter.tf:1,1-15
+2020/10/28 22:00:37 [TRACE] Context.Input: Input for provider.aws: map[string]cty.Value{}
+2020/10/28 22:00:37 [TRACE] backend/local: running validation operation
+2020/10/28 22:00:37 [INFO] terraform: building graph: GraphTypeValidate
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.ConfigTransformer
+2020/10/28 22:00:37 [TRACE] ConfigTransformer: Starting for path: 
+2020/10/28 22:00:37 [TRACE] ConfigTransformer: Starting for path: alb_sg
+2020/10/28 22:00:37 [TRACE] ConfigTransformer: Starting for path: ec2
+2020/10/28 22:00:37 [TRACE] ConfigTransformer: Starting for path: ec2_sg
+2020/10/28 22:00:37 [TRACE] ConfigTransformer: Starting for path: vpc
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.ConfigTransformer with new graph:
+aws_alb_listener.http - *terraform.NodeValidatableResource
+aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+aws_lb.alb - *terraform.NodeValidatableResource
+aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+data.aws_iam_role.role - *terraform.NodeValidatableResource
+module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+module.vpc.aws_route.private - *terraform.NodeValidatableResource
+module.vpc.aws_route.public - *terraform.NodeValidatableResource
+module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+------
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.LocalTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.LocalTransformer with new graph:
+aws_alb_listener.http - *terraform.NodeValidatableResource
+aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+aws_lb.alb - *terraform.NodeValidatableResource
+aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+data.aws_iam_role.role - *terraform.NodeValidatableResource
+local.NameTag - *terraform.NodeLocal
+local.enable_deletion_protection - *terraform.NodeLocal
+local.path - *terraform.NodeLocal
+local.port - *terraform.NodeLocal
+local.protocol - *terraform.NodeLocal
+module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+module.vpc.aws_route.private - *terraform.NodeValidatableResource
+module.vpc.aws_route.public - *terraform.NodeValidatableResource
+module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+------
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.OutputTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.OutputTransformer with new graph:
+aws_alb_listener.http - *terraform.NodeValidatableResource
+aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+aws_lb.alb - *terraform.NodeValidatableResource
+aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+data.aws_iam_role.role - *terraform.NodeValidatableResource
+local.NameTag - *terraform.NodeLocal
+local.enable_deletion_protection - *terraform.NodeLocal
+local.path - *terraform.NodeLocal
+local.port - *terraform.NodeLocal
+local.protocol - *terraform.NodeLocal
+module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+module.vpc.aws_route.private - *terraform.NodeValidatableResource
+module.vpc.aws_route.public - *terraform.NodeValidatableResource
+module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+module.vpc.output.private_subnet_id - *terraform.NodeApplyableOutput
+module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+module.vpc.output.vpc_cidr - *terraform.NodeApplyableOutput
+module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+output.instance_ip - *terraform.NodeApplyableOutput
+------
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.OrphanResourceInstanceTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.OrphanResourceInstanceTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.StateTransformer
+2020/10/28 22:00:37 [TRACE] StateTransformer: state is empty, so nothing to do
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.StateTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.OrphanOutputTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.OrphanOutputTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.AttachResourceConfigTransformer
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "aws_lb.alb" (*terraform.NodeValidatableResource) config from alb.tf:1,1-24
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.vpc.aws_route.private" (*terraform.NodeValidatableResource) config from modules/vpc/main.tf:83,1-31
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "data.aws_iam_role.role" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"aws_back.tf", Start:hcl.Pos{Line:4, Column:1, Byte:29}, End:hcl.Pos{Line:4, Column:27, Byte:55}}
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.ec2.aws_instance.ec2" (*terraform.NodeValidatableResource) config from modules/ec2/main.tf:6,1-30
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.vpc.aws_route_table.private" (*terraform.NodeValidatableResource) config from modules/vpc/main.tf:53,1-37
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.vpc.aws_subnet.public" (*terraform.NodeValidatableResource) config from modules/vpc/main.tf:25,1-31
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.vpc.aws_subnet.private" (*terraform.NodeValidatableResource) config from modules/vpc/main.tf:35,1-32
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.vpc.aws_route_table_association.public" (*terraform.NodeValidatableResource) config from modules/vpc/main.tf:64,1-48
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.ec2_sg.aws_security_group.sg" (*terraform.NodeValidatableResource) config from modules/security_group/main.tf:1,1-35
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.vpc.aws_eip.nat_gateway" (*terraform.NodeValidatableResource) config from modules/vpc/main.tf:102,1-33
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.vpc.aws_route_table.public" (*terraform.NodeValidatableResource) config from modules/vpc/main.tf:47,1-36
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "aws_lb_target_group.terraform_tg" (*terraform.NodeValidatableResource) config from alb.tf:25,1-46
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "aws_backup_plan.EC2" (*terraform.NodeValidatableResource) config from aws_back.tf:14,1-33
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.vpc.aws_vpc.minami_vpc" (*terraform.NodeValidatableResource) config from modules/vpc/main.tf:7,1-32
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.vpc.aws_internet_gateway.igw" (*terraform.NodeValidatableResource) config from modules/vpc/main.tf:17,1-38
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.vpc.aws_route.public" (*terraform.NodeValidatableResource) config from modules/vpc/main.tf:77,1-30
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "aws_lb_target_group_attachment.tg2" (*terraform.NodeValidatableResource) config from alb.tf:55,1-48
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "aws_backup_vault.EC2" (*terraform.NodeValidatableResource) config from aws_back.tf:9,1-34
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.alb_sg.aws_security_group.sg" (*terraform.NodeValidatableResource) config from modules/security_group/main.tf:1,1-35
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.vpc.data.aws_availability_zones.available" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"modules/vpc/main.tf", Start:hcl.Pos{Line:2, Column:1, Byte:42}, End:hcl.Pos{Line:2, Column:42, Byte:83}}
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "aws_backup_selection.EC2" (*terraform.NodeValidatableResource) config from aws_back.tf:27,1-38
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.ec2.data.aws_ssm_parameter.amzn2_ami" (*terraform.NodeValidatableResource) config from hcl.Range{Filename:"modules/ec2/main.tf", Start:hcl.Pos{Line:2, Column:1, Byte:40}, End:hcl.Pos{Line:2, Column:33, Byte:72}}
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.vpc.aws_route_table_association.private" (*terraform.NodeValidatableResource) config from modules/vpc/main.tf:70,1-49
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "module.vpc.aws_nat_gateway.nat_gateway" (*terraform.NodeValidatableResource) config from modules/vpc/main.tf:92,1-41
+2020/10/28 22:00:37 [TRACE] AttachResourceConfigTransformer: attaching to "aws_alb_listener.http" (*terraform.NodeValidatableResource) config from alb.tf:11,1-35
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.AttachResourceConfigTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.AttachStateTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.AttachStateTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.RootVariableTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.RootVariableTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.MissingProvisionerTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.MissingProvisionerTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.ProvisionerTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.ProvisionerTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.ModuleVariableTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.ModuleVariableTransformer with new graph:
+aws_alb_listener.http - *terraform.NodeValidatableResource
+aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+aws_lb.alb - *terraform.NodeValidatableResource
+aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+data.aws_iam_role.role - *terraform.NodeValidatableResource
+local.NameTag - *terraform.NodeLocal
+local.enable_deletion_protection - *terraform.NodeLocal
+local.path - *terraform.NodeLocal
+local.port - *terraform.NodeLocal
+local.protocol - *terraform.NodeLocal
+module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+module.vpc.aws_route.private - *terraform.NodeValidatableResource
+module.vpc.aws_route.public - *terraform.NodeValidatableResource
+module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+module.vpc.output.private_subnet_id - *terraform.NodeApplyableOutput
+module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+module.vpc.output.vpc_cidr - *terraform.NodeApplyableOutput
+module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+output.instance_ip - *terraform.NodeApplyableOutput
+------
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.graphTransformerMulti
+2020/10/28 22:00:37 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderConfigTransformer
+2020/10/28 22:00:37 [TRACE] ProviderConfigTransformer: attaching to "provider.aws" provider configuration from parameter.tf:1,1-15
+2020/10/28 22:00:37 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderConfigTransformer with new graph:
+aws_alb_listener.http - *terraform.NodeValidatableResource
+aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+aws_lb.alb - *terraform.NodeValidatableResource
+aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+data.aws_iam_role.role - *terraform.NodeValidatableResource
+local.NameTag - *terraform.NodeLocal
+local.enable_deletion_protection - *terraform.NodeLocal
+local.path - *terraform.NodeLocal
+local.port - *terraform.NodeLocal
+local.protocol - *terraform.NodeLocal
+module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+module.vpc.aws_route.private - *terraform.NodeValidatableResource
+module.vpc.aws_route.public - *terraform.NodeValidatableResource
+module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+module.vpc.output.private_subnet_id - *terraform.NodeApplyableOutput
+module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+module.vpc.output.vpc_cidr - *terraform.NodeApplyableOutput
+module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+output.instance_ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+------
+2020/10/28 22:00:37 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.MissingProviderTransformer
+2020/10/28 22:00:37 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.MissingProviderTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ProviderTransformer
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: aws_lb.alb is provided by provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_route.private is provided by module.vpc.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: data.aws_iam_role.role is provided by provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.ec2.aws_instance.ec2 is provided by module.ec2.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_route_table.private is provided by module.vpc.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_route_table_association.public is provided by module.vpc.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.ec2_sg.aws_security_group.sg is provided by module.ec2_sg.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_eip.nat_gateway is provided by module.vpc.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_route_table.public is provided by module.vpc.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_subnet.public is provided by module.vpc.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_subnet.private is provided by module.vpc.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: aws_lb_target_group.terraform_tg is provided by provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: aws_backup_plan.EC2 is provided by provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_vpc.minami_vpc is provided by module.vpc.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: aws_lb_target_group_attachment.tg2 is provided by provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: aws_backup_vault.EC2 is provided by provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.alb_sg.aws_security_group.sg is provided by module.alb_sg.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_internet_gateway.igw is provided by module.vpc.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_route.public is provided by module.vpc.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: aws_backup_selection.EC2 is provided by provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.ec2.data.aws_ssm_parameter.amzn2_ami is provided by module.ec2.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_route_table_association.private is provided by module.vpc.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.data.aws_availability_zones.available is provided by module.vpc.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_nat_gateway.nat_gateway is provided by module.vpc.provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: aws_alb_listener.http is provided by provider.aws or inherited equivalent
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_subnet.public uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.vpc.aws_subnet.public" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_lb_target_group_attachment.tg2
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "aws_lb_target_group_attachment.tg2" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.alb_sg.aws_security_group.sg uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.alb_sg.aws_security_group.sg" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_internet_gateway.igw uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.vpc.aws_internet_gateway.igw" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.data.aws_availability_zones.available uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.vpc.data.aws_availability_zones.available" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_route_table.private uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.vpc.aws_route_table.private" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_eip.nat_gateway uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.vpc.aws_eip.nat_gateway" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_lb_target_group.terraform_tg
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "aws_lb_target_group.terraform_tg" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_vpc.minami_vpc uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.vpc.aws_vpc.minami_vpc" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_backup_vault.EC2
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "aws_backup_vault.EC2" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.ec2.aws_instance.ec2 uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.ec2.aws_instance.ec2" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_route_table_association.public uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.vpc.aws_route_table_association.public" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.ec2_sg.aws_security_group.sg uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.ec2_sg.aws_security_group.sg" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_route_table.public uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.vpc.aws_route_table.public" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_subnet.private uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.vpc.aws_subnet.private" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_route_table_association.private uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.vpc.aws_route_table_association.private" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_lb.alb
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "aws_lb.alb" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: exact match for provider.aws serving data.aws_iam_role.role
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "data.aws_iam_role.role" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_route.public uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.vpc.aws_route.public" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_backup_selection.EC2
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "aws_backup_selection.EC2" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.ec2.data.aws_ssm_parameter.amzn2_ami uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.ec2.data.aws_ssm_parameter.amzn2_ami" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_nat_gateway.nat_gateway uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.vpc.aws_nat_gateway.nat_gateway" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_alb_listener.http
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "aws_alb_listener.http" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: module.vpc.aws_route.private uses inherited configuration provider.aws
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "module.vpc.aws_route.private" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] ProviderTransformer: exact match for provider.aws serving aws_backup_plan.EC2
+2020/10/28 22:00:37 [DEBUG] ProviderTransformer: "aws_backup_plan.EC2" (*terraform.NodeValidatableResource) needs provider.aws
+2020/10/28 22:00:37 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ProviderTransformer with new graph:
+aws_alb_listener.http - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb.alb - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_iam_role.role - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+local.NameTag - *terraform.NodeLocal
+local.enable_deletion_protection - *terraform.NodeLocal
+local.path - *terraform.NodeLocal
+local.port - *terraform.NodeLocal
+local.protocol - *terraform.NodeLocal
+module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route.private - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route.public - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.output.private_subnet_id - *terraform.NodeApplyableOutput
+module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+module.vpc.output.vpc_cidr - *terraform.NodeApplyableOutput
+module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+output.instance_ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+------
+2020/10/28 22:00:37 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.PruneProviderTransformer
+2020/10/28 22:00:37 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.PruneProviderTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] (graphTransformerMulti) Executing graph transform *terraform.ParentProviderTransformer
+2020/10/28 22:00:37 [TRACE] (graphTransformerMulti) Completed graph transform *terraform.ParentProviderTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.graphTransformerMulti with new graph:
+aws_alb_listener.http - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb.alb - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_iam_role.role - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+local.NameTag - *terraform.NodeLocal
+local.enable_deletion_protection - *terraform.NodeLocal
+local.path - *terraform.NodeLocal
+local.port - *terraform.NodeLocal
+local.protocol - *terraform.NodeLocal
+module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route.private - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route.public - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.output.private_subnet_id - *terraform.NodeApplyableOutput
+module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+module.vpc.output.vpc_cidr - *terraform.NodeApplyableOutput
+module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+output.instance_ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+------
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.RemovedModuleTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.RemovedModuleTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.AttachSchemaTransformer
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.vpc.aws_nat_gateway.nat_gateway
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching provider config schema to provider.aws
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_alb_listener.http
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_lb.alb
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.vpc.aws_route.private
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to data.aws_iam_role.role
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.ec2.aws_instance.ec2
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.vpc.aws_route_table.private
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.vpc.aws_subnet.private
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.vpc.aws_route_table_association.public
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.ec2_sg.aws_security_group.sg
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.vpc.aws_eip.nat_gateway
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.vpc.aws_route_table.public
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.vpc.aws_subnet.public
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_lb_target_group.terraform_tg
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_backup_plan.EC2
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.vpc.aws_vpc.minami_vpc
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.vpc.aws_route.public
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_lb_target_group_attachment.tg2
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_backup_vault.EC2
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.alb_sg.aws_security_group.sg
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.vpc.aws_internet_gateway.igw
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to aws_backup_selection.EC2
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.ec2.data.aws_ssm_parameter.amzn2_ami
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.vpc.aws_route_table_association.private
+2020/10/28 22:00:37 [TRACE] AttachSchemaTransformer: attaching resource schema to module.vpc.data.aws_availability_zones.available
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.AttachSchemaTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.ReferenceTransformer
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.ec2.output.instance_ip" references: [module.ec2.aws_instance.ec2]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "provider.aws" references: []
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.aws_nat_gateway.nat_gateway" references: [module.vpc.aws_internet_gateway.igw module.vpc.var.vpc_para module.vpc.var.vpc_para module.vpc.aws_eip.nat_gateway module.vpc.aws_subnet.private]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "local.port" references: []
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "local.protocol" references: []
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.ec2_sg.output.sg_id" references: [module.ec2_sg.aws_security_group.sg]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.output.vpc_id" references: [module.vpc.aws_vpc.minami_vpc]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "aws_alb_listener.http" references: [aws_lb.alb aws_lb_target_group.terraform_tg]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.aws_route.private" references: [module.vpc.var.vpc_para module.vpc.aws_route_table.private module.vpc.aws_nat_gateway.nat_gateway]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.alb_sg.var.sg_para" references: [module.vpc.output.vpc_id]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "aws_lb.alb" references: [module.vpc.output.public_subnet_id local.NameTag module.alb_sg.output.sg_id local.enable_deletion_protection]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.ec2.aws_instance.ec2" references: [module.ec2.var.ec2_para module.ec2.var.ec2_para module.ec2.var.ec2_para module.ec2.var.ec2_para module.ec2.var.ec2_para module.ec2.var.ec2_para module.ec2.data.aws_ssm_parameter.amzn2_ami module.ec2.var.ec2_para module.ec2.var.ebs_para module.ec2.var.ebs_para module.ec2.var.ebs_para]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.aws_route_table.private" references: [module.vpc.var.vpc_para module.vpc.var.vpc_para module.vpc.aws_vpc.minami_vpc]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "local.path" references: []
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.ec2.var.ebs_para" references: []
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.ec2_sg.var.sg_para" references: [module.vpc.output.vpc_id]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "data.aws_iam_role.role" references: []
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.aws_eip.nat_gateway" references: [module.vpc.aws_internet_gateway.igw module.vpc.var.vpc_para module.vpc.var.vpc_para]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.aws_route_table.public" references: [module.vpc.var.vpc_para module.vpc.aws_vpc.minami_vpc]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.aws_subnet.public" references: [module.vpc.var.vpc_para module.vpc.aws_vpc.minami_vpc module.vpc.var.vpc_para module.vpc.data.aws_availability_zones.available module.vpc.aws_vpc.minami_vpc]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.aws_subnet.private" references: [module.vpc.var.vpc_para module.vpc.var.vpc_para module.vpc.aws_vpc.minami_vpc module.vpc.var.vpc_para module.vpc.aws_vpc.minami_vpc module.vpc.data.aws_availability_zones.available]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.aws_route_table_association.public" references: [module.vpc.var.vpc_para module.vpc.aws_route_table.public module.vpc.aws_subnet.public]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.alb_sg.output.sg_id" references: [module.alb_sg.aws_security_group.sg]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.output.vpc_cidr" references: [module.vpc.aws_vpc.minami_vpc]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.ec2_sg.aws_security_group.sg" references: [module.ec2_sg.var.sg_para module.ec2_sg.var.sg_para module.ec2_sg.var.sg_para module.ec2_sg.var.sg_para module.ec2_sg.var.sg_para]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.ec2.var.ec2_para" references: [module.vpc.output.vpc_id module.vpc.output.public_subnet_id module.ec2_sg.output.sg_id]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "aws_backup_plan.EC2" references: [aws_backup_vault.EC2]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.aws_vpc.minami_vpc" references: [module.vpc.var.vpc_para module.vpc.var.vpc_para module.vpc.var.vpc_para module.vpc.var.vpc_para]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.ec2.output.instance_id" references: [module.ec2.aws_instance.ec2]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.var.vpc_para" references: []
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "aws_lb_target_group.terraform_tg" references: [module.vpc.output.vpc_id local.NameTag local.protocol local.port]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "aws_backup_vault.EC2" references: []
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.alb_sg.aws_security_group.sg" references: [module.alb_sg.var.sg_para module.alb_sg.var.sg_para module.alb_sg.var.sg_para module.alb_sg.var.sg_para module.alb_sg.var.sg_para]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.aws_internet_gateway.igw" references: [module.vpc.aws_vpc.minami_vpc module.vpc.var.vpc_para]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.aws_route.public" references: [module.vpc.aws_internet_gateway.igw module.vpc.aws_route_table.public]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.output.public_subnet_id" references: [module.vpc.aws_subnet.public]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.output.private_subnet_id" references: [module.vpc.aws_subnet.private]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "output.instance_ip" references: [module.ec2.output.instance_ip]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "aws_lb_target_group_attachment.tg2" references: [module.ec2.output.instance_id aws_lb_target_group.terraform_tg]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.ec2.data.aws_ssm_parameter.amzn2_ami" references: []
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.aws_route_table_association.private" references: [module.vpc.var.vpc_para module.vpc.aws_subnet.private module.vpc.aws_route_table.private]
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "module.vpc.data.aws_availability_zones.available" references: []
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "local.NameTag" references: []
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "local.enable_deletion_protection" references: []
+2020/10/28 22:00:37 [DEBUG] ReferenceTransformer: "aws_backup_selection.EC2" references: [aws_backup_plan.EC2 data.aws_iam_role.role]
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.ReferenceTransformer with new graph:
+aws_alb_listener.http - *terraform.NodeValidatableResource
+  aws_lb.alb - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+  aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  data.aws_iam_role.role - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb.alb - *terraform.NodeValidatableResource
+  local.NameTag - *terraform.NodeLocal
+  local.enable_deletion_protection - *terraform.NodeLocal
+  module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  local.NameTag - *terraform.NodeLocal
+  local.port - *terraform.NodeLocal
+  local.protocol - *terraform.NodeLocal
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_iam_role.role - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+local.NameTag - *terraform.NodeLocal
+local.enable_deletion_protection - *terraform.NodeLocal
+local.path - *terraform.NodeLocal
+local.port - *terraform.NodeLocal
+local.protocol - *terraform.NodeLocal
+module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+  module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+  module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+  module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route.private - *terraform.NodeValidatableResource
+  module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route.public - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.output.private_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+module.vpc.output.vpc_cidr - *terraform.NodeApplyableOutput
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+output.instance_ip - *terraform.NodeApplyableOutput
+  module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+------
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.CountBoundaryTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.CountBoundaryTransformer with new graph:
+aws_alb_listener.http - *terraform.NodeValidatableResource
+  aws_lb.alb - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+  aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  data.aws_iam_role.role - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb.alb - *terraform.NodeValidatableResource
+  local.NameTag - *terraform.NodeLocal
+  local.enable_deletion_protection - *terraform.NodeLocal
+  module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  local.NameTag - *terraform.NodeLocal
+  local.port - *terraform.NodeLocal
+  local.protocol - *terraform.NodeLocal
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_iam_role.role - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+local.NameTag - *terraform.NodeLocal
+local.enable_deletion_protection - *terraform.NodeLocal
+local.path - *terraform.NodeLocal
+local.port - *terraform.NodeLocal
+local.protocol - *terraform.NodeLocal
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  aws_alb_listener.http - *terraform.NodeValidatableResource
+  aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+  aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  aws_lb.alb - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+  data.aws_iam_role.role - *terraform.NodeValidatableResource
+  local.NameTag - *terraform.NodeLocal
+  local.enable_deletion_protection - *terraform.NodeLocal
+  local.path - *terraform.NodeLocal
+  local.port - *terraform.NodeLocal
+  local.protocol - *terraform.NodeLocal
+  module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+  module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+  module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+  module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+  module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+  module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_route.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  module.vpc.output.private_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.output.vpc_cidr - *terraform.NodeApplyableOutput
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  output.instance_ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+  module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+  module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+  module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route.private - *terraform.NodeValidatableResource
+  module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route.public - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.output.private_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+module.vpc.output.vpc_cidr - *terraform.NodeApplyableOutput
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+output.instance_ip - *terraform.NodeApplyableOutput
+  module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+------
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.TargetsTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.TargetsTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.ForcedCBDTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.ForcedCBDTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.CloseProviderTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.CloseProviderTransformer with new graph:
+aws_alb_listener.http - *terraform.NodeValidatableResource
+  aws_lb.alb - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+  aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  data.aws_iam_role.role - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb.alb - *terraform.NodeValidatableResource
+  local.NameTag - *terraform.NodeLocal
+  local.enable_deletion_protection - *terraform.NodeLocal
+  module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  local.NameTag - *terraform.NodeLocal
+  local.port - *terraform.NodeLocal
+  local.protocol - *terraform.NodeLocal
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_iam_role.role - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+local.NameTag - *terraform.NodeLocal
+local.enable_deletion_protection - *terraform.NodeLocal
+local.path - *terraform.NodeLocal
+local.port - *terraform.NodeLocal
+local.protocol - *terraform.NodeLocal
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  aws_alb_listener.http - *terraform.NodeValidatableResource
+  aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+  aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  aws_lb.alb - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+  data.aws_iam_role.role - *terraform.NodeValidatableResource
+  local.NameTag - *terraform.NodeLocal
+  local.enable_deletion_protection - *terraform.NodeLocal
+  local.path - *terraform.NodeLocal
+  local.port - *terraform.NodeLocal
+  local.protocol - *terraform.NodeLocal
+  module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+  module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+  module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+  module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+  module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+  module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_route.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  module.vpc.output.private_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.output.vpc_cidr - *terraform.NodeApplyableOutput
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  output.instance_ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+  module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+  module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+  module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route.private - *terraform.NodeValidatableResource
+  module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route.public - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.output.private_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+module.vpc.output.vpc_cidr - *terraform.NodeApplyableOutput
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+output.instance_ip - *terraform.NodeApplyableOutput
+  module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_alb_listener.http - *terraform.NodeValidatableResource
+  aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+  aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  aws_lb.alb - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+  data.aws_iam_role.role - *terraform.NodeValidatableResource
+  module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+  module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_route.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+------
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.CloseProvisionerTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.CloseProvisionerTransformer (no changes)
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.RootTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.RootTransformer with new graph:
+aws_alb_listener.http - *terraform.NodeValidatableResource
+  aws_lb.alb - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+  aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  data.aws_iam_role.role - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb.alb - *terraform.NodeValidatableResource
+  local.NameTag - *terraform.NodeLocal
+  local.enable_deletion_protection - *terraform.NodeLocal
+  module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  local.NameTag - *terraform.NodeLocal
+  local.port - *terraform.NodeLocal
+  local.protocol - *terraform.NodeLocal
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+data.aws_iam_role.role - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+local.NameTag - *terraform.NodeLocal
+local.enable_deletion_protection - *terraform.NodeLocal
+local.path - *terraform.NodeLocal
+local.port - *terraform.NodeLocal
+local.protocol - *terraform.NodeLocal
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  aws_alb_listener.http - *terraform.NodeValidatableResource
+  aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+  aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  aws_lb.alb - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+  data.aws_iam_role.role - *terraform.NodeValidatableResource
+  local.NameTag - *terraform.NodeLocal
+  local.enable_deletion_protection - *terraform.NodeLocal
+  local.path - *terraform.NodeLocal
+  local.port - *terraform.NodeLocal
+  local.protocol - *terraform.NodeLocal
+  module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+  module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+  module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+  module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+  module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+  module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_route.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  module.vpc.output.private_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.output.vpc_cidr - *terraform.NodeApplyableOutput
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  output.instance_ip - *terraform.NodeApplyableOutput
+  provider.aws - *terraform.NodeApplyableProvider
+module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+  module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+  module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+  module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route.private - *terraform.NodeValidatableResource
+  module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route.public - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.output.private_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+module.vpc.output.vpc_cidr - *terraform.NodeApplyableOutput
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+output.instance_ip - *terraform.NodeApplyableOutput
+  module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_alb_listener.http - *terraform.NodeValidatableResource
+  aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+  aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  aws_lb.alb - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+  data.aws_iam_role.role - *terraform.NodeValidatableResource
+  module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+  module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_route.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+------
+2020/10/28 22:00:37 [TRACE] Executing graph transform *terraform.TransitiveReductionTransformer
+2020/10/28 22:00:37 [TRACE] Completed graph transform *terraform.TransitiveReductionTransformer with new graph:
+aws_alb_listener.http - *terraform.NodeValidatableResource
+  aws_lb.alb - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+  aws_backup_plan.EC2 - *terraform.NodeValidatableResource
+  data.aws_iam_role.role - *terraform.NodeValidatableResource
+aws_backup_vault.EC2 - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+aws_lb.alb - *terraform.NodeValidatableResource
+  local.NameTag - *terraform.NodeLocal
+  local.enable_deletion_protection - *terraform.NodeLocal
+  module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  local.NameTag - *terraform.NodeLocal
+  local.port - *terraform.NodeLocal
+  local.protocol - *terraform.NodeLocal
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+  aws_lb_target_group.terraform_tg - *terraform.NodeValidatableResource
+  module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+data.aws_iam_role.role - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+local.NameTag - *terraform.NodeLocal
+local.enable_deletion_protection - *terraform.NodeLocal
+local.path - *terraform.NodeLocal
+local.port - *terraform.NodeLocal
+local.protocol - *terraform.NodeLocal
+meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  aws_alb_listener.http - *terraform.NodeValidatableResource
+  aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+  aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+  local.path - *terraform.NodeLocal
+  module.vpc.aws_route.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+  module.vpc.output.private_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.output.vpc_cidr - *terraform.NodeApplyableOutput
+  output.instance_ip - *terraform.NodeApplyableOutput
+module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+module.alb_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.alb_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.alb_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+  module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+  module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+module.ec2.data.aws_ssm_parameter.amzn2_ami - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.ec2.output.instance_id - *terraform.NodeApplyableOutput
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+  module.ec2.aws_instance.ec2 - *terraform.NodeValidatableResource
+module.ec2.var.ebs_para - *terraform.NodeApplyableModuleVariable
+module.ec2.var.ec2_para - *terraform.NodeApplyableModuleVariable
+  module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+  module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+module.ec2_sg.output.sg_id - *terraform.NodeApplyableOutput
+  module.ec2_sg.aws_security_group.sg - *terraform.NodeValidatableResource
+module.ec2_sg.var.sg_para - *terraform.NodeApplyableModuleVariable
+  module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_eip.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+module.vpc.aws_route.private - *terraform.NodeValidatableResource
+  module.vpc.aws_nat_gateway.nat_gateway - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+module.vpc.aws_route.public - *terraform.NodeValidatableResource
+  module.vpc.aws_internet_gateway.igw - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.private - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table.public - *terraform.NodeValidatableResource
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+  module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.data.aws_availability_zones.available - *terraform.NodeValidatableResource
+  provider.aws - *terraform.NodeApplyableProvider
+module.vpc.output.private_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_subnet.private - *terraform.NodeValidatableResource
+module.vpc.output.public_subnet_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_subnet.public - *terraform.NodeValidatableResource
+module.vpc.output.vpc_cidr - *terraform.NodeApplyableOutput
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.output.vpc_id - *terraform.NodeApplyableOutput
+  module.vpc.aws_vpc.minami_vpc - *terraform.NodeValidatableResource
+module.vpc.var.vpc_para - *terraform.NodeApplyableModuleVariable
+output.instance_ip - *terraform.NodeApplyableOutput
+  module.ec2.output.instance_ip - *terraform.NodeApplyableOutput
+provider.aws - *terraform.NodeApplyableProvider
+provider.aws (close) - *terraform.graphNodeCloseProvider
+  aws_alb_listener.http - *terraform.NodeValidatableResource
+  aws_backup_selection.EC2 - *terraform.NodeValidatableResource
+  aws_lb_target_group_attachment.tg2 - *terraform.NodeValidatableResource
+  module.vpc.aws_route.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route.public - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table_association.private - *terraform.NodeValidatableResource
+  module.vpc.aws_route_table_association.public - *terraform.NodeValidatableResource
+root - terraform.graphNodeRoot
+  meta.count-boundary (EachMode fixup) - *terraform.NodeCountBoundary
+  provider.aws (close) - *terraform.graphNodeCloseProvider
+------
+2020/10/28 22:00:37 [DEBUG] Starting graph walk: walkValidate
+2020/10/28 22:00:37 [TRACE] dag/walk: updating graph
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "local.enable_deletion_protection"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "aws_backup_selection.EC2"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.output.public_subnet_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.aws_route_table_association.private"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "local.port"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "aws_lb.alb"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.aws_eip.nat_gateway"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.aws_route_table_association.public"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.output.vpc_cidr"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "output.instance_ip"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "local.NameTag"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "aws_alb_listener.http"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.alb_sg.var.sg_para"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.ec2_sg.var.sg_para"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.ec2_sg.aws_security_group.sg"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.var.vpc_para"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.aws_route.public"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.data.aws_availability_zones.available"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.ec2.aws_instance.ec2"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.aws_subnet.public"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.ec2.var.ec2_para"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "aws_backup_vault.EC2"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.alb_sg.aws_security_group.sg"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "aws_lb_target_group_attachment.tg2"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.aws_nat_gateway.nat_gateway"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.output.vpc_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.aws_route.private"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.aws_route_table.public"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.aws_vpc.minami_vpc"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.output.private_subnet_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.ec2.output.instance_ip"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "local.protocol"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.ec2_sg.output.sg_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.aws_route_table.private"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.ec2.output.instance_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.ec2.data.aws_ssm_parameter.amzn2_ami"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "provider.aws (close)"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "meta.count-boundary (EachMode fixup)"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "local.path"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "aws_backup_plan.EC2"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "aws_lb_target_group.terraform_tg"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.aws_internet_gateway.igw"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "root"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "provider.aws"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.ec2.var.ebs_para"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "data.aws_iam_role.role"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.vpc.aws_subnet.private"
+2020/10/28 22:00:37 [TRACE] dag/walk: added new vertex: "module.alb_sg.output.sg_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "module.vpc.aws_route_table_association.private"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_lb_target_group_attachment.tg2" waiting on "module.ec2.output.instance_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "local.path"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.vpc.aws_route_table_association.public"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.alb_sg.var.sg_para" waiting on "module.vpc.output.vpc_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.alb_sg.aws_security_group.sg" waiting on "module.alb_sg.var.sg_para"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "output.instance_ip"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_lb.alb" waiting on "module.alb_sg.output.sg_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_alb_listener.http"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_route.private" waiting on "module.vpc.aws_route_table.private"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.output.vpc_cidr" waiting on "module.vpc.aws_vpc.minami_vpc"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_lb_target_group.terraform_tg" waiting on "module.vpc.output.vpc_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.output.public_subnet_id" waiting on "module.vpc.aws_subnet.public"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.vpc.aws_route_table_association.private"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_alb_listener.http" waiting on "aws_lb_target_group.terraform_tg"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_route_table.public" waiting on "module.vpc.aws_vpc.minami_vpc"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_internet_gateway.igw" waiting on "module.vpc.aws_vpc.minami_vpc"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_subnet.private" waiting on "module.vpc.data.aws_availability_zones.available"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_lb_target_group_attachment.tg2"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.ec2.aws_instance.ec2" waiting on "module.ec2.var.ebs_para"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_route.public" waiting on "module.vpc.aws_internet_gateway.igw"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "module.vpc.aws_route.public"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.alb_sg.output.sg_id" waiting on "module.alb_sg.aws_security_group.sg"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "root" waiting on "meta.count-boundary (EachMode fixup)"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_route_table_association.public" waiting on "module.vpc.aws_route_table.public"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "aws_backup_selection.EC2"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_lb.alb" waiting on "local.NameTag"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_nat_gateway.nat_gateway" waiting on "module.vpc.aws_eip.nat_gateway"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_backup_vault.EC2" waiting on "provider.aws"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_route.public" waiting on "module.vpc.aws_route_table.public"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_backup_selection.EC2" waiting on "data.aws_iam_role.role"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.ec2.output.instance_id" waiting on "module.ec2.aws_instance.ec2"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.output.vpc_id" waiting on "module.vpc.aws_vpc.minami_vpc"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "module.vpc.aws_route.private"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.ec2.var.ec2_para" waiting on "module.ec2_sg.output.sg_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.data.aws_availability_zones.available" waiting on "provider.aws"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "output.instance_ip" waiting on "module.ec2.output.instance_ip"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_vpc.minami_vpc" waiting on "provider.aws"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.ec2.output.instance_ip" waiting on "module.ec2.aws_instance.ec2"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_lb_target_group.terraform_tg" waiting on "local.NameTag"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_lb.alb" waiting on "local.enable_deletion_protection"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.vpc.aws_route.private"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_lb_target_group_attachment.tg2" waiting on "aws_lb_target_group.terraform_tg"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "data.aws_iam_role.role" waiting on "provider.aws"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_route_table_association.public" waiting on "module.vpc.aws_subnet.public"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_lb_target_group.terraform_tg" waiting on "local.port"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_alb_listener.http" waiting on "aws_lb.alb"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_subnet.private" waiting on "module.vpc.aws_vpc.minami_vpc"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "module.vpc.aws_route_table_association.public"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.output.private_subnet_id" waiting on "module.vpc.aws_subnet.private"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_nat_gateway.nat_gateway" waiting on "module.vpc.aws_subnet.private"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.vpc.aws_route.public"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_route_table.private" waiting on "module.vpc.aws_vpc.minami_vpc"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "root" waiting on "provider.aws (close)"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_subnet.public" waiting on "module.vpc.aws_vpc.minami_vpc"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_vpc.minami_vpc" waiting on "module.vpc.var.vpc_para"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_route_table_association.private" waiting on "module.vpc.aws_subnet.private"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_route.private" waiting on "module.vpc.aws_nat_gateway.nat_gateway"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_lb_target_group.terraform_tg" waiting on "local.protocol"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.ec2.data.aws_ssm_parameter.amzn2_ami" waiting on "provider.aws"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_subnet.public" waiting on "module.vpc.data.aws_availability_zones.available"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_backup_plan.EC2" waiting on "aws_backup_vault.EC2"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.ec2_sg.output.sg_id" waiting on "module.ec2_sg.aws_security_group.sg"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.ec2_sg.var.sg_para" waiting on "module.vpc.output.vpc_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "aws_alb_listener.http"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.ec2_sg.aws_security_group.sg" waiting on "module.ec2_sg.var.sg_para"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "provider.aws (close)" waiting on "aws_backup_selection.EC2"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.vpc.output.vpc_cidr"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_eip.nat_gateway" waiting on "module.vpc.aws_internet_gateway.igw"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.ec2.aws_instance.ec2" waiting on "module.ec2.var.ec2_para"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.ec2.var.ec2_para" waiting on "module.vpc.output.public_subnet_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.vpc.aws_route_table_association.private" waiting on "module.vpc.aws_route_table.private"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "module.vpc.output.private_subnet_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_backup_selection.EC2" waiting on "aws_backup_plan.EC2"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "module.ec2.aws_instance.ec2" waiting on "module.ec2.data.aws_ssm_parameter.amzn2_ami"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "meta.count-boundary (EachMode fixup)" waiting on "aws_lb_target_group_attachment.tg2"
+2020/10/28 22:00:37 [TRACE] dag/walk: added edge: "aws_lb.alb" waiting on "module.vpc.output.public_subnet_id"
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.aws_eip.nat_gateway", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "provider.aws (close)", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.aws_route_table.public", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.aws_route.public", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.aws_route_table_association.public", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.data.aws_availability_zones.available", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.ec2_sg.var.sg_para", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.alb_sg.var.sg_para", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "aws_lb.alb", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.aws_route.private", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.ec2.output.instance_ip", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.alb_sg.output.sg_id", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.ec2.output.instance_id", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "data.aws_iam_role.role", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.aws_route_table.private", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "aws_lb_target_group.terraform_tg", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "root", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.ec2.var.ec2_para", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.output.private_subnet_id", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "aws_backup_plan.EC2", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "aws_lb_target_group_attachment.tg2", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.aws_nat_gateway.nat_gateway", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.aws_subnet.public", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "meta.count-boundary (EachMode fixup)", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.output.public_subnet_id", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.aws_subnet.private", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.aws_route_table_association.private", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.ec2.data.aws_ssm_parameter.amzn2_ami", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.ec2_sg.output.sg_id", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.aws_vpc.minami_vpc", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.alb_sg.aws_security_group.sg", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.aws_internet_gateway.igw", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.ec2.aws_instance.ec2", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "aws_backup_vault.EC2", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.output.vpc_id", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "output.instance_ip", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.vpc.output.vpc_cidr", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "aws_alb_listener.http", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "aws_backup_selection.EC2", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: dependencies changed for "module.ec2_sg.aws_security_group.sg", sending new deps
+2020/10/28 22:00:37 [TRACE] dag/walk: visiting "local.port"
+2020/10/28 22:00:37 [TRACE] vertex "local.port": starting visit (*terraform.NodeLocal)
+2020/10/28 22:00:37 [TRACE] dag/walk: visiting "local.enable_deletion_protection"
+2020/10/28 22:00:37 [TRACE] dag/walk: visiting "module.vpc.var.vpc_para"
+2020/10/28 22:00:37 [TRACE] vertex "module.vpc.var.vpc_para": starting visit (*terraform.NodeApplyableModuleVariable)
+2020/10/28 22:00:37 [TRACE] dag/walk: visiting "local.NameTag"
+2020/10/28 22:00:37 [TRACE] vertex "local.NameTag": starting visit (*terraform.NodeLocal)
+2020/10/28 22:00:37 [TRACE] vertex "local.NameTag": evaluating
+2020/10/28 22:00:37 [TRACE] [walkValidate] Entering eval tree: local.NameTag
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalLocal
+2020/10/28 22:00:37 [TRACE] [walkValidate] Exiting eval tree: local.NameTag
+2020/10/28 22:00:37 [TRACE] vertex "local.NameTag": visit complete
+2020/10/28 22:00:37 [TRACE] vertex "local.enable_deletion_protection": starting visit (*terraform.NodeLocal)
+2020/10/28 22:00:37 [TRACE] vertex "module.vpc.var.vpc_para": evaluating
+2020/10/28 22:00:37 [TRACE] vertex "local.port": evaluating
+2020/10/28 22:00:37 [TRACE] dag/walk: visiting "provider.aws"
+2020/10/28 22:00:37 [TRACE] vertex "provider.aws": starting visit (*terraform.NodeApplyableProvider)
+2020/10/28 22:00:37 [TRACE] dag/walk: visiting "local.protocol"
+2020/10/28 22:00:37 [TRACE] vertex "local.protocol": starting visit (*terraform.NodeLocal)
+2020/10/28 22:00:37 [TRACE] vertex "local.protocol": evaluating
+2020/10/28 22:00:37 [TRACE] dag/walk: visiting "local.path"
+2020/10/28 22:00:37 [TRACE] [walkValidate] Entering eval tree: local.protocol
+2020/10/28 22:00:37 [TRACE] vertex "local.path": starting visit (*terraform.NodeLocal)
+2020/10/28 22:00:37 [TRACE] vertex "local.path": evaluating
+2020/10/28 22:00:37 [TRACE] dag/walk: visiting "module.ec2.var.ebs_para"
+2020/10/28 22:00:37 [TRACE] vertex "module.ec2.var.ebs_para": starting visit (*terraform.NodeApplyableModuleVariable)
+2020/10/28 22:00:37 [TRACE] vertex "provider.aws": evaluating
+2020/10/28 22:00:37 [TRACE] [walkValidate] Entering eval tree: provider.aws
+2020/10/28 22:00:37 [TRACE] vertex "local.enable_deletion_protection": evaluating
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalInitProvider
+2020/10/28 22:00:37 [TRACE] [walkValidate] Entering eval tree: local.enable_deletion_protection
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalLocal
+2020/10/28 22:00:37 [TRACE] [walkValidate] Entering eval tree: local.port
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalLocal
+2020/10/28 22:00:37 [TRACE] [walkValidate] Exiting eval tree: local.port
+2020/10/28 22:00:37 [TRACE] vertex "local.port": visit complete
+2020/10/28 22:00:37 [TRACE] [walkValidate] Exiting eval tree: local.enable_deletion_protection
+2020/10/28 22:00:37 [TRACE] vertex "local.enable_deletion_protection": visit complete
+2020/10/28 22:00:37 [TRACE] [walkValidate] Entering eval tree: local.path
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalLocal
+2020/10/28 22:00:37 [TRACE] vertex "module.ec2.var.ebs_para": evaluating
+2020/10/28 22:00:37 [TRACE] [walkValidate] Entering eval tree: module.ec2.var.ebs_para
+2020/10/28 22:00:37 [TRACE] [walkValidate] Entering eval tree: module.vpc.var.vpc_para
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalLocal
+2020/10/28 22:00:37 [TRACE] [walkValidate] Exiting eval tree: local.path
+2020/10/28 22:00:37 [TRACE] vertex "local.path": visit complete
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2020-10-28T22:00:37.822+0900 [INFO]  plugin: configuring client automatic mTLS
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2020/10/28 22:00:37 [TRACE] [walkValidate] Exiting eval tree: local.protocol
+2020/10/28 22:00:37 [TRACE] vertex "local.protocol": visit complete
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2020/10/28 22:00:37 [TRACE] [walkValidate] Exiting eval tree: module.vpc.var.vpc_para
+2020/10/28 22:00:37 [TRACE] vertex "module.vpc.var.vpc_para": visit complete
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2020/10/28 22:00:37 [TRACE] [walkValidate] Exiting eval tree: module.ec2.var.ebs_para
+2020/10/28 22:00:37 [TRACE] vertex "module.ec2.var.ebs_para": visit complete
+2020-10-28T22:00:37.853+0900 [DEBUG] plugin: starting plugin: path=/Users/mkoki0822/terraform/.terraform/plugins/darwin_amd64/terraform-provider-aws_v3.12.0_x5 args=[/Users/mkoki0822/terraform/.terraform/plugins/darwin_amd64/terraform-provider-aws_v3.12.0_x5]
+2020-10-28T22:00:37.857+0900 [DEBUG] plugin: plugin started: path=/Users/mkoki0822/terraform/.terraform/plugins/darwin_amd64/terraform-provider-aws_v3.12.0_x5 pid=69693
+2020-10-28T22:00:37.857+0900 [DEBUG] plugin: waiting for RPC address: path=/Users/mkoki0822/terraform/.terraform/plugins/darwin_amd64/terraform-provider-aws_v3.12.0_x5
+2020-10-28T22:00:37.897+0900 [INFO]  plugin.terraform-provider-aws_v3.12.0_x5: configuring server automatic mTLS: timestamp=2020-10-28T22:00:37.897+0900
+2020-10-28T22:00:37.929+0900 [DEBUG] plugin: using plugin: version=5
+2020-10-28T22:00:37.929+0900 [DEBUG] plugin.terraform-provider-aws_v3.12.0_x5: plugin address: address=/var/folders/6p/xmqwxhnx7xq3pvy18dyy_zmh0000gn/T/plugin287143760 network=unix timestamp=2020-10-28T22:00:37.929+0900
+2020/10/28 22:00:37 [TRACE] BuiltinEvalContext: Initialized "aws" provider for provider.aws
+2020/10/28 22:00:37 [TRACE] <root>: eval: terraform.EvalNoop
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:37 [TRACE] <root>: eval: *terraform.EvalValidateProvider
+2020/10/28 22:00:37 [TRACE] buildProviderConfig for provider.aws: using explicit config only
+2020/10/28 22:00:37 [TRACE] GRPCProvider: GetSchema
+2020/10/28 22:00:38 [TRACE] GRPCProvider: PrepareProviderConfig
+2020/10/28 22:00:38 [TRACE] <root>: eval: terraform.EvalNoop
+2020/10/28 22:00:38 [TRACE] <root>: eval: terraform.EvalNoop
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: provider.aws
+2020/10/28 22:00:38 [TRACE] vertex "provider.aws": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.data.aws_availability_zones.available"
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "aws_backup_vault.EC2"
+2020/10/28 22:00:38 [TRACE] vertex "aws_backup_vault.EC2": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "aws_backup_vault.EC2": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: aws_backup_vault.EC2
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.ec2.data.aws_ssm_parameter.amzn2_ami"
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.aws_vpc.minami_vpc"
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_vpc.minami_vpc": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.data.aws_availability_zones.available": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.data.aws_availability_zones.available": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.data.aws_availability_zones.available
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "data.aws_iam_role.role"
+2020/10/28 22:00:38 [TRACE] vertex "data.aws_iam_role.role": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_vpc.minami_vpc": evaluating
+2020/10/28 22:00:38 [TRACE] vertex "data.aws_iam_role.role": evaluating
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.aws_vpc.minami_vpc
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.data.aws_ssm_parameter.amzn2_ami": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.data.aws_ssm_parameter.amzn2_ami": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: data.aws_iam_role.role
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.ec2.data.aws_ssm_parameter.amzn2_ami
+2020/10/28 22:00:38 [TRACE] module.ec2: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.ec2: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.ec2: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.aws_vpc.minami_vpc
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_vpc.minami_vpc": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.aws_route_table.public"
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route_table.public": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route_table.public": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.data.aws_availability_zones.available
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateDataSourceConfig
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: aws_backup_vault.EC2
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.output.vpc_cidr"
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.output.vpc_cidr": starting visit (*terraform.NodeApplyableOutput)
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.output.vpc_id"
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.output.vpc_id": starting visit (*terraform.NodeApplyableOutput)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.output.vpc_id": evaluating
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.output.vpc_cidr": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.output.vpc_id
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.output.vpc_cidr
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalWriteOutput
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.aws_route_table.private"
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Removing module.vpc.output.vpc_cidr from state (it is now null)
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Saving Create change for module.vpc.output.vpc_cidr in changeset
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.output.vpc_cidr
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route_table.private": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route_table.private": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.aws_route_table.private
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.data.aws_availability_zones.available": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.aws_subnet.private"
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_subnet.private": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "aws_backup_vault.EC2": visit complete
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.ec2.data.aws_ssm_parameter.amzn2_ami
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.aws_internet_gateway.igw"
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.aws_route_table.public
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: data.aws_iam_role.role
+2020/10/28 22:00:38 [TRACE] vertex "data.aws_iam_role.role": visit complete
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.output.vpc_cidr": visit complete
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_subnet.private": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.aws_subnet.private
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.aws_subnet.public"
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_subnet.public": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "aws_backup_plan.EC2"
+2020/10/28 22:00:38 [TRACE] vertex "aws_backup_plan.EC2": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.data.aws_ssm_parameter.amzn2_ami": visit complete
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_internet_gateway.igw": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_internet_gateway.igw": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.aws_internet_gateway.igw
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalWriteOutput
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Removing module.vpc.output.vpc_id from state (it is now null)
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Saving Create change for module.vpc.output.vpc_id in changeset
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_subnet.public": evaluating
+2020/10/28 22:00:38 [TRACE] vertex "aws_backup_plan.EC2": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.output.vpc_id
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.output.vpc_id": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.ec2_sg.var.sg_para"
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2_sg.var.sg_para": starting visit (*terraform.NodeApplyableModuleVariable)
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2_sg.var.sg_para": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.ec2_sg.var.sg_para
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "aws_lb_target_group.terraform_tg"
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.aws_subnet.public
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.aws_subnet.private
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_subnet.private": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.output.private_subnet_id"
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.output.private_subnet_id": starting visit (*terraform.NodeApplyableOutput)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.output.private_subnet_id": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.output.private_subnet_id
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalWriteOutput
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Removing module.vpc.output.private_subnet_id from state (it is now null)
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.aws_internet_gateway.igw
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Saving Create change for module.vpc.output.private_subnet_id in changeset
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.output.private_subnet_id
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.output.private_subnet_id": visit complete
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.alb_sg.var.sg_para"
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.ec2_sg.var.sg_para
+2020/10/28 22:00:38 [TRACE] vertex "aws_lb_target_group.terraform_tg": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.aws_route_table.private
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: aws_backup_plan.EC2
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_internet_gateway.igw": visit complete
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.aws_eip.nat_gateway"
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.aws_route_table.public
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route_table.public": visit complete
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_eip.nat_gateway": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_eip.nat_gateway": evaluating
+2020/10/28 22:00:38 [TRACE] vertex "module.alb_sg.var.sg_para": starting visit (*terraform.NodeApplyableModuleVariable)
+2020/10/28 22:00:38 [TRACE] vertex "module.alb_sg.var.sg_para": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.alb_sg.var.sg_para
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2_sg.var.sg_para": visit complete
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.alb_sg.var.sg_para
+2020/10/28 22:00:38 [TRACE] vertex "module.alb_sg.var.sg_para": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.alb_sg.aws_security_group.sg"
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.ec2_sg.aws_security_group.sg"
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2_sg.aws_security_group.sg": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2_sg.aws_security_group.sg": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.ec2_sg.aws_security_group.sg
+2020/10/28 22:00:38 [TRACE] module.ec2_sg: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route_table.private": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.aws_route_table_association.private"
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route_table_association.private": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route_table_association.private": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.aws_route_table_association.private
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.aws_route.public"
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route.public": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route.public": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.aws_route.public
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.aws_eip.nat_gateway
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] vertex "aws_lb_target_group.terraform_tg": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: aws_lb_target_group.terraform_tg
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: aws_backup_plan.EC2
+2020/10/28 22:00:38 [TRACE] vertex "aws_backup_plan.EC2": visit complete
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.aws_subnet.public
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] vertex "module.alb_sg.aws_security_group.sg": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.alb_sg.aws_security_group.sg": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.alb_sg.aws_security_group.sg
+2020/10/28 22:00:38 [TRACE] module.alb_sg: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.alb_sg: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.alb_sg: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] module.ec2_sg: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.ec2_sg: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "aws_backup_selection.EC2"
+2020/10/28 22:00:38 [TRACE] vertex "aws_backup_selection.EC2": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_subnet.public": visit complete
+2020/10/28 22:00:38 [TRACE] vertex "aws_backup_selection.EC2": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: aws_backup_selection.EC2
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.aws_route_table_association.public"
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.aws_route.public
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route.public": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.output.public_subnet_id"
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.output.public_subnet_id": starting visit (*terraform.NodeApplyableOutput)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.output.public_subnet_id": evaluating
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route_table_association.public": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route_table_association.public": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.aws_route_table_association.public
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: aws_lb_target_group.terraform_tg
+2020/10/28 22:00:38 [TRACE] vertex "aws_lb_target_group.terraform_tg": visit complete
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.output.public_subnet_id
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.aws_eip.nat_gateway
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalWriteOutput
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Removing module.vpc.output.public_subnet_id from state (it is now null)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_eip.nat_gateway": visit complete
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Saving Create change for module.vpc.output.public_subnet_id in changeset
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.output.public_subnet_id
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.output.public_subnet_id": visit complete
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.aws_nat_gateway.nat_gateway"
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_nat_gateway.nat_gateway": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_nat_gateway.nat_gateway": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.aws_nat_gateway.nat_gateway
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.aws_route_table_association.private
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route_table_association.private": visit complete
+2020-10-28T22:00:38.241+0900 [DEBUG] plugin.terraform-provider-aws_v3.12.0_x5: 2020/10/28 22:00:38 [WARN] Truncating attribute path of 0 diagnostics for TypeSet
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020-10-28T22:00:38.241+0900 [DEBUG] plugin.terraform-provider-aws_v3.12.0_x5: 2020/10/28 22:00:38 [WARN] Truncating attribute path of 0 diagnostics for TypeSet
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.aws_route_table_association.public
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route_table_association.public": visit complete
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: aws_backup_selection.EC2
+2020/10/28 22:00:38 [TRACE] vertex "aws_backup_selection.EC2": visit complete
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.alb_sg.aws_security_group.sg
+2020/10/28 22:00:38 [TRACE] vertex "module.alb_sg.aws_security_group.sg": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.alb_sg.output.sg_id"
+2020/10/28 22:00:38 [TRACE] vertex "module.alb_sg.output.sg_id": starting visit (*terraform.NodeApplyableOutput)
+2020/10/28 22:00:38 [TRACE] vertex "module.alb_sg.output.sg_id": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.alb_sg.output.sg_id
+2020/10/28 22:00:38 [TRACE] module.alb_sg: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.alb_sg: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:38 [TRACE] module.alb_sg: eval: *terraform.EvalWriteOutput
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.aws_nat_gateway.nat_gateway
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_nat_gateway.nat_gateway": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.vpc.aws_route.private"
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route.private": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route.private": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.vpc.aws_route.private
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Removing module.alb_sg.output.sg_id from state (it is now null)
+2020/10/28 22:00:38 [TRACE] module.vpc: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Saving Create change for module.alb_sg.output.sg_id in changeset
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.alb_sg.output.sg_id
+2020/10/28 22:00:38 [TRACE] vertex "module.alb_sg.output.sg_id": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "aws_lb.alb"
+2020/10/28 22:00:38 [TRACE] vertex "aws_lb.alb": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "aws_lb.alb": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: aws_lb.alb
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.ec2_sg.aws_security_group.sg
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2_sg.aws_security_group.sg": visit complete
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.ec2_sg.output.sg_id"
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2_sg.output.sg_id": starting visit (*terraform.NodeApplyableOutput)
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2_sg.output.sg_id": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.ec2_sg.output.sg_id
+2020/10/28 22:00:38 [TRACE] module.ec2_sg: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.ec2_sg: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:38 [TRACE] module.ec2_sg: eval: *terraform.EvalWriteOutput
+2020-10-28T22:00:38.241+0900 [DEBUG] plugin.terraform-provider-aws_v3.12.0_x5: 2020/10/28 22:00:38 [WARN] Truncating attribute path of 0 diagnostics for TypeSet
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Removing module.ec2_sg.output.sg_id from state (it is now null)
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Saving Create change for module.ec2_sg.output.sg_id in changeset
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.ec2_sg.output.sg_id
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2_sg.output.sg_id": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.ec2.var.ec2_para"
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.var.ec2_para": starting visit (*terraform.NodeApplyableModuleVariable)
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.var.ec2_para": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.ec2.var.ec2_para
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalModuleCallArgument
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSetModuleCallArguments
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.ec2.var.ec2_para
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.var.ec2_para": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.ec2.aws_instance.ec2"
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.aws_instance.ec2": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.vpc.aws_route.private
+2020/10/28 22:00:38 [TRACE] vertex "module.vpc.aws_route.private": visit complete
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.aws_instance.ec2": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.ec2.aws_instance.ec2
+2020/10/28 22:00:38 [TRACE] module.ec2: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.ec2: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] module.ec2: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: aws_lb.alb
+2020/10/28 22:00:38 [TRACE] vertex "aws_lb.alb": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "aws_alb_listener.http"
+2020/10/28 22:00:38 [TRACE] vertex "aws_alb_listener.http": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "aws_alb_listener.http": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: aws_alb_listener.http
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] GRPCProvider: ValidateResourceTypeConfig
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.ec2.aws_instance.ec2
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.aws_instance.ec2": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.ec2.output.instance_ip"
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.output.instance_ip": starting visit (*terraform.NodeApplyableOutput)
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.output.instance_ip": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.ec2.output.instance_ip
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "module.ec2.output.instance_id"
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.output.instance_id": starting visit (*terraform.NodeApplyableOutput)
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: aws_alb_listener.http
+2020/10/28 22:00:38 [TRACE] vertex "aws_alb_listener.http": visit complete
+2020/10/28 22:00:38 [TRACE] module.ec2: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.ec2: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:38 [TRACE] module.ec2: eval: *terraform.EvalWriteOutput
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.output.instance_id": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: module.ec2.output.instance_id
+2020/10/28 22:00:38 [TRACE] module.ec2: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] module.ec2: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:38 [TRACE] module.ec2: eval: *terraform.EvalWriteOutput
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Removing module.ec2.output.instance_ip from state (it is now null)
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Saving Create change for module.ec2.output.instance_ip in changeset
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.ec2.output.instance_ip
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.output.instance_ip": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "output.instance_ip"
+2020/10/28 22:00:38 [TRACE] vertex "output.instance_ip": starting visit (*terraform.NodeApplyableOutput)
+2020/10/28 22:00:38 [TRACE] vertex "output.instance_ip": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: output.instance_ip
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalOpFilter
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalWriteOutput
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Saving value for module.ec2.output.instance_id in state
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Removing output.instance_ip from state (it is now null)
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Saving Create change for output.instance_ip in changeset
+2020/10/28 22:00:38 [TRACE] EvalWriteOutput: Saving Create change for module.ec2.output.instance_id in changeset
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: module.ec2.output.instance_id
+2020/10/28 22:00:38 [TRACE] [walkValidate] Exiting eval tree: output.instance_ip
+2020/10/28 22:00:38 [TRACE] vertex "module.ec2.output.instance_id": visit complete
+2020/10/28 22:00:38 [TRACE] vertex "output.instance_ip": visit complete
+2020/10/28 22:00:38 [TRACE] dag/walk: visiting "aws_lb_target_group_attachment.tg2"
+2020/10/28 22:00:38 [TRACE] vertex "aws_lb_target_group_attachment.tg2": starting visit (*terraform.NodeValidatableResource)
+2020/10/28 22:00:38 [TRACE] vertex "aws_lb_target_group_attachment.tg2": evaluating
+2020/10/28 22:00:38 [TRACE] [walkValidate] Entering eval tree: aws_lb_target_group_attachment.tg2
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalSequence
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalGetProvider
+2020/10/28 22:00:38 [TRACE] <root>: eval: *terraform.EvalValidateResource
+2020/10/28 22:00:38 [TRACE] vertex "aws_lb_target_group_attachment.tg2": visit complete
+panic: not a string
+
+goroutine 129 [running]:
+github.com/zclconf/go-cty/cty.Value.AsString(...)
+	/opt/teamcity-agent/work/9e329aa031982669/pkg/mod/github.com/zclconf/go-cty@v1.0.1-0.20190708163926-19588f92a98f/cty/value_ops.go:1026
+github.com/zclconf/go-cty/cty.Value.AsValueMap(0x2e278a0, 0xc000874fa0, 0x25cba80, 0xc000874fc0, 0x1)
+	/opt/teamcity-agent/work/9e329aa031982669/pkg/mod/github.com/zclconf/go-cty@v1.0.1-0.20190708163926-19588f92a98f/cty/value_ops.go:1095 +0x38a
+github.com/hashicorp/terraform/terraform.evaluateResourceForEachExpressionKnown(0x2e26560, 0xc00001e120, 0x2e594c0, 0xc0007a2c30, 0x0, 0x0, 0x0, 0x100b609, 0xc0011ef6b8)
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/terraform/eval_for_each.go:84 +0x5bd
+github.com/hashicorp/terraform/terraform.(*EvalValidateResource).validateForEach(0xc000ed4140, 0x2e594c0, 0xc0007a2c30, 0x2e26560, 0xc00001e120, 0x0, 0x0, 0x0)
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/terraform/eval_validate.go:572 +0x59
+github.com/hashicorp/terraform/terraform.(*EvalValidateResource).Eval(0xc000ed4140, 0x2e594c0, 0xc0007a2c30, 0x2, 0x2, 0x0, 0x0)
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/terraform/eval_validate.go:394 +0x1b57
+github.com/hashicorp/terraform/terraform.EvalRaw(0x2de5e80, 0xc000ed4140, 0x2e594c0, 0xc0007a2c30, 0x0, 0x0, 0x0, 0x0)
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/terraform/eval.go:57 +0x131
+github.com/hashicorp/terraform/terraform.(*EvalSequence).Eval(0xc000874a40, 0x2e594c0, 0xc0007a2c30, 0x2, 0x2, 0x1ad38c5, 0x2de5e80)
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/terraform/eval_sequence.go:20 +0xfd
+github.com/hashicorp/terraform/terraform.EvalRaw(0x2de5de0, 0xc000874a40, 0x2e594c0, 0xc0007a2c30, 0x26826a0, 0x3e03465, 0x25ef1a0, 0xc000a77fc0)
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/terraform/eval.go:57 +0x131
+github.com/hashicorp/terraform/terraform.Eval(0x2de5de0, 0xc000874a40, 0x2e594c0, 0xc0007a2c30, 0xc000874a40, 0x2de5de0, 0xc000874a40, 0x0)
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/terraform/eval.go:35 +0x4d
+github.com/hashicorp/terraform/terraform.(*Graph).walk.func1(0x28e1c20, 0xc0003c8160, 0x0, 0x0, 0x0)
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/terraform/graph.go:90 +0xf40
+github.com/hashicorp/terraform/dag.(*Walker).walkVertex(0xc00078f080, 0x28e1c20, 0xc0003c8160, 0xc0000bd3c0)
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/dag/walk.go:392 +0x353
+created by github.com/hashicorp/terraform/dag.(*Walker).Update
+	/opt/teamcity-agent/work/9e329aa031982669/src/github.com/hashicorp/terraform/dag/walk.go:314 +0xa9b

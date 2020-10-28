@@ -8,7 +8,7 @@ data "aws_iam_role" "role" {
 
 resource "aws_backup_vault" "EC2" {
   //名前は変数にできそう
-  name = "EC2"
+  name = "EC3"
 }
 
 resource "aws_backup_plan" "EC2" {

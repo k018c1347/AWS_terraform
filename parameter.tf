@@ -36,7 +36,7 @@ module ec2 {
     sg_id            = module.ec2_sg.sg_id
     NameTag          = "Terraform"
     instance_type    = "t2.micro"
-    instance_count   = 2
+    instance_count   = ["EC2-1a"]
     key_name         = "cf-minami"
   }
   ebs_para = {

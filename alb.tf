@@ -38,7 +38,7 @@ resource "aws_lb_target_group_attachment" "ec2" {
   port             = 80
 }
 */
-
+/*
 resource "aws_lb_target_group_attachment" "tg1" {
   target_group_arn = aws_lb_target_group.terraform_tg.arn
   target_id        = module.ec2.instance_id[0]
@@ -50,5 +50,14 @@ resource "aws_lb_target_group_attachment" "tg2" {
   target_id        = module.ec2.instance_id[1]
   port             = 80
 }
+*/
 
+resource "aws_lb_target_group_attachment" "tg2" {
+  for_each=module.ec2.instance_id
+  target_group_arn = aws_lb_target_group.terraform_tg.arn
+  target_id        = each.value
+  port             = 80
 
+  depends_on = [module.ec2.instance_id]
+
+}

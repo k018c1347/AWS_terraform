@@ -5,7 +5,7 @@ variable "ec2_para" {
     sg_id            = string
     NameTag          = string
     instance_type    = string
-    instance_count   = number
+    instance_count   = list(string)
     key_name         = string
   })
 }
