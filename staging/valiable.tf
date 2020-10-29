@@ -17,14 +17,19 @@ module vpc {
 }
 
 module ec2_sg {
-  source = "../modules/security_group"
+  source = "../modules/security_group/resource"
 
-  sg_para = {
-    name        = "sg"
-    vpc_id      = module.vpc.vpc_id
-    protocol    = "tcp"
-    port        = [22, 80, 443]
-    cidr_blocks = ["0.0.0.0/0"]
+  sg_para_source = {
+    name     = "sg"
+    vpc_id   = module.vpc.vpc_id
+    protocol = "tcp"
+    //port        = [22, 80, 443]
+    port = {
+      "ssh"   = 22,
+      "http"  = 80,
+      "https" = 443
+    }
+    source = module.lb_sg.sg_id
   }
 }
 
@@ -48,15 +53,22 @@ module ec2 {
 }
 
 module lb_sg {
-  source = "../modules/security_group"
+  source = "../modules/security_group/cidr_block"
 
   sg_para = {
-    name        = "alb_sg"
-    vpc_id      = module.vpc.vpc_id
-    protocol    = "tcp"
-    port        = [80, 443]
+    name     = "alb_sg"
+    vpc_id   = module.vpc.vpc_id
+    protocol = "tcp"
+    //port        = [80, 443]
+    port = {
+      "http"  = 80,
+      "https" = 443
+    }
     cidr_blocks = ["0.0.0.0/0"]
+
   }
+
+
 }
 
 
@@ -68,6 +80,7 @@ module lb {
     sg_id                      = module.lb_sg.sg_id
     NameTag                    = "Terraform"
     enable_deletion_protection = false
+    access_logs_bucket         = module.s3_log_bucket.s3_bucket_id
   }
   lb_target_config = {
     port        = 80
@@ -89,3 +102,18 @@ module backup {
   }
 }
 
+
+
+module s3_log_bucket {
+
+  source = "../modules/s3"
+
+  s3_para = {
+    bucket                 = "minamiterraformalblogs"
+    acl                    = "private"
+    force_destroy          = "false"
+    lifecycle_rule_enabled = "true"
+    lifecycle_rule_days    = "180"
+  }
+
+}
