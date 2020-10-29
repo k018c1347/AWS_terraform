@@ -3,7 +3,11 @@ variable "sg_para" {
     name        = string
     vpc_id      = string
     protocol    = string
-    port        = list(number)
+    port        = any
     cidr_blocks = list(string)
+
   })
 }
+
+
+

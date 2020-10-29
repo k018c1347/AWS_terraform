@@ -33,7 +33,7 @@ resource "aws_instance" "ec2" {
 */
 
 resource "aws_instance" "ec2" {
-  for_each=toset(var.ec2_para.instance_count)
+  for_each = toset(var.ec2_para.instance_count)
   //count         = var.ec2_para.instance_count
   ami           = data.aws_ssm_parameter.amzn2_ami.value
   instance_type = var.ec2_para.instance_type
@@ -49,7 +49,11 @@ resource "aws_instance" "ec2" {
   vpc_security_group_ids = [
     var.ec2_para.sg_id
   ]
-  subnet_id = element(var.ec2_para.public_subnet_id, 2 % length(var.ec2_para.public_subnet_id))
+
+
+  subnet_id = element(var.ec2_para.public_subnet_id, index(var.ec2_para.instance_count, each.value) % length(var.ec2_para.public_subnet_id))
+
+
   root_block_device {
     volume_type           = var.ebs_para.volume_type
     volume_size           = var.ebs_para.volume_size

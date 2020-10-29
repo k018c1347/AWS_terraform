@@ -4,6 +4,7 @@ variable "lb_base_config" {
     sg_id                      = string
     NameTag                    = string
     enable_deletion_protection = string
+    access_logs_bucket         = string
   })
 }
 variable "lb_target_config" {
